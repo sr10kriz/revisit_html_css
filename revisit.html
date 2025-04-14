@@ -1,0 +1,125 @@
+<!-- 1. HTML Basics -->
+
+<!-- # what is Html ? -->
+<!-- Hypertext Markup Language used to structure content on the webpage (browser/dom) -->
+
+<!-- # Tags -->
+<!-- A Tag is a syntax that used to create an element. -->
+<!-- Tags are enclosed in angle brackets (<>). -->
+<!-- there are opening tags (<div>) as well as closing tags (</div>). -->
+<!-- i.e: <div></div> -->
+
+<!-- # Elements -->
+<!-- A Element is complete Tag with opening tags, closing tags, content inside the tags -->
+<!-- And more additional informations like attributes, styles, event handlers etc... -->
+<!-- i.e <div>Hello Messi</div> -->
+
+<!-- # Self Closing Elements -->
+<!-- A Self Closing elements that does not require closing tags, because it doesnt have any content inside -->
+<!-- Otherwise called as void elements -->
+<!-- i.e <img />, <br />, <hr />, <input /> etc... -->
+
+<!-- # Block level elements -->
+<!-- ELements that are start on a new line, they occupies full width of screen (available by default) -->
+<!-- i.e <div>, <p>, <h1> to <h6>, <section>, <article>, <header>, <footer>, <ul>, <ol>, <li>, <table> etc... -->
+
+<!-- # Inline elements -->
+<!-- Elements that aren't start on a new line, only takes as much as width needed -->
+<!-- i.e <span>, <a>, <img>, <label>, <strong>, <emp> etc... -->
+
+<!-- 2. HTML Structure -->
+
+<!-- # Basic HTML template -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Page</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+  </body>
+</html> 
+
+1. <!DOCTYPE html> - its not a Tag, its a declaration, that tell the web browser which version of HTML we are using, it must be at the very top of the HTML elements
+2. <html lang="en"> - this wraps all the contents of the webpage both visible as well as the hidden contents. lang is a attribute that tells the web browser which language we are using, mostly helpfull in SEO 
+3. <head> - its a metadata section - metadata means "data about data", it gives information about the webpage but isn't visible to the end users.
+4. What goes inside the <head> section
+    # <title> - title of the tab/browser window
+    # <meta charset="UTF-8"> - sets characters encoding (UTF-8 supports most characters)
+    # <meta name="viewport" content="width=device-width, initial-scale=1.0"> - for mobile responsiveness
+    # <link> - connect external css files
+    # <style> - for using internal css
+    # <script> - internal/external scripts (js)
+    # <meta name="description"> - description for the SEO's
+5. <body> - everything that the user sees and interacts that goes under the body tag
+-->
+
+<!-- 3. Text Formatting Tags -->
+<!-- <h1> to <h6> - headings (h1 is largest, h6 is smallest) -->
+<!-- <p> - paragraph -->
+<!-- <strong> - bold and important -->
+<!-- <emp> - italic and emphasized -->
+<!-- <br> - line break -->
+<!-- <hr> - horizontal rule (divider) -->
+
+<!-- 4. Lists -->
+
+<!-- # <ol> - Ordered Lists - list where sequence matters -->
+<!-- i.e 
+ <ol>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+ </ol>
+ -> the output will be 1,2,3 (by default it will 1,2,3 and so on)
+ -> with the type attribute of a <ol> tag we can customise the numbers with letters i.e <ol type="A"></ol>
+     -->
+
+<!-- # <ul> - Unordered Lists - list where the orders doesn't matter -->
+<!-- i.e 
+ <ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+ </ul>
+ -> the output will be bullets
+ -> we can customize this with css list-style-type prop with values as square etc...
+  -->
+
+<!-- # <dl> - Definition Lists - list with definitions, it doesn't use bullets or numbers -->
+<!-- i.e 
+ <dl> - definition list (wrapper)
+    <dt>HTML<dt> - defintion term
+    <dd>Its Hypertext Markup Language</dd> - definition description
+ </dl>
+-->
+
+<!-- 5. Links and Images -->
+
+<!-- # Links -->
+<!-- <a /> - anchor tag - a link from one to another page could be internal, external, a section of a same page, a file or even a email address -->
+<!-- i.e <a href="https://example.com">Visit Example</a> -->
+<!-- attributes of anchor tag -->
+<!-- href - url or a file path to link -->
+<!-- target - where to open the link (_blank - new tab), (_self - current tab) -->
+<!-- title - its tooltip text when hovered -->
+<!-- download - prompts file download instead of opening a link -->
+<!-- Use rel="noopener noreferrer" when using target="_blank" for security reasons. -->
+
+<!-- # Images -->
+<!-- <img /> - to embed visual content on a web page (photos, diagrams, icons etc...) -->
+<!-- i.e <img src="image.jpg" alt="Description of image"> -->
+<!-- attributes of img tag -->
+<!-- src - path to the image -->
+<!-- alt - alternative text shown (if image fails to load) -->
+<!-- width and height - set image dimensions with px or percentage -->
+<!-- title - its tooltip text when hovered -->
+<!-- loading="lazy" - defers image loading for performance -->
+<!-- Lazy loading is a performance optimization technique where images (or other resources) are not loaded until they are needed — usually when they are about to appear in the viewport (visible part of the browser window). -->
+<!-- loading attribute has three values
+ 1. lazy - Defers loading until image is near the viewport
+ 2. eager - Loads the image as soon as the page loads (default for some cases)
+ 3. auto - Browser decides whether to lazy load or not
+ -->

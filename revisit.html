@@ -123,3 +123,66 @@
  2. eager - Loads the image as soon as the page loads (default for some cases)
  3. auto - Browser decides whether to lazy load or not
  -->
+
+<!-- 6. Forms -->
+
+<!-- # <form> - its a element that used to collect user input and send it to a server -->
+<!-- # attributes of form element -->
+<!-- action - url or a api where the collected form data will be sent  -->
+<!-- method - http methods to identify request type i.e GET, POST, PUT, PATCH, DELETE etc... -->
+<!-- enctype - used only with POST method, mandatory while dealing with files upload, values as follows: -->
+<!-- enctype="application/x-www-form-urlencoded" - Default normal form data -->
+<!-- enctype="multipart/form-data" - mandatory for file uploads -->
+<!-- enctype="text/plain" - sends data as plain text -->
+<!-- target - where the form response will displayed, _blank, _self, _parent, _top -->
+<!-- autocomplete - helps browser to autofill form values -->
+<!-- novalidate - skips HTML5 validations required, pattern (RegEx validations) etc...uses js custom validations -->
+<!-- name - reference of the form we may use this name in js to retrieve manipulate form datas, mainly used to identify the data on the server side -->
+
+<!-- HTTP METHODS -->
+<!-- GET - to retrieve data, and data appended as query parameters mostly in filters, search etc... -->
+<!-- POST - send often data/large data to the server, where the data goes under body of the http request -->
+<!-- PUT - to update data -->
+<!-- PATCH - partial update -->
+<!-- DELETE - to delete data -->
+
+<!-- # Form Inputs -->
+<!-- text, email, password, number, checkbox, radio, file, submit, select with option, url, date, time, datetime-local, month, week, range, color, hidden, button  -->
+<!-- attributes of inputs -->
+<!-- maxlength, minlength, pattern, required, readonly, disabled, placeholder, value, name, id, class, accept -->
+<!-- multiple - used with email and files to allow multiple values -->
+
+<!-- # HTML-level Validations -->
+<!-- required, min, max, pattern (RegEx validations) -->
+
+<!-- # Event Handlers in forms and inputs -->
+<!-- Events handlers are functions that get triggered while a specific event occurs i.e click, submit, blur etc... -->
+<!-- HTML events -->
+<!-- onclick - trigger while user click an element -->
+<!-- onchange - trigger while user changes input values (after blur) -->
+<!-- oninput - trigger while user changes input values (realtime) -->
+<!-- onfocus - trigger while element get focused -->
+<!-- onblur - trigger while element loses its focus -->
+<!-- onsubmit - trigger while the form is submitted -->
+<!-- onreset - trigger while the form is reset -->
+<!-- onkeydown - trigger while key is pressed down -->
+<!-- onkeyup - trigger while key is released -->
+<!-- onmouseover - trigger while mouse hover on the element -->
+<!-- onmouseout - trigger while mouse moves away -->
+
+<!-- this - is a keyword that refer the current object/element with all their details -->
+<!-- event.preventDefault() - used to stop the default behaviour of an element when an event occurs -->
+<!-- event.stopPropagation() - stops an event from triggering parent elements event listeners (Stop event bubbling) i.e see below -->
+<!-- 
+<div onclick="alert('DIV clicked!')">
+  <button id="myBtn">Click me</button>
+</div>
+
+<script>
+  document.getElementById("myBtn").addEventListener("click", function(e) {
+    e.stopPropagation(); // stops the click from bubbling to the div
+    alert("Button clicked!");
+  });
+</script>
+-->
+<!-- refer above - Without stopPropagation(), clicking the button would trigger both alerts — the button and the surrounding <div> -->

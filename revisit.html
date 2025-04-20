@@ -291,3 +291,20 @@
 <!-- autoplay - plays audio when page loads -->
 <!-- loop - loop the audio -->
 <!-- muted - starts audio muted -->
+
+<!-- # source - used inside audio and video tags to provide and support (multiple i.e one source as mp4, the second source will be as webm etc...) file types -->
+<!-- i.e
+ <video controls>
+  <source src="lover.mp4" type="video/mp4">
+  <source src="lover.webm" type="video/webm">
+ </video>
+-->
+
+<!-- # picture - for responsive images (performance and responsiveness) -->
+<!-- i.e
+ <picture>
+  <source media="(max-width: 600px)" srcset="small.jpg">
+  <source media="(min-width: 601px)" srcset="large.jpg">
+  <img src="fallback.jpg" alt="responsive image">
+ </picture>
+-->

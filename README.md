@@ -86,7 +86,7 @@ Use this guide as a revision sheet before HTML technical rounds or as a learning
 
 ## 👨‍💻 Maintained By
 
-**Sridharakrishnan**  
+**Sridharakrishnan R**  
 https://github.com/sr10kriz
 
 ---

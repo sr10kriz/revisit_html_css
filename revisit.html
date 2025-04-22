@@ -386,6 +386,7 @@
   }
 -->
 
+<!-- 2. Selectors -->
 <!-- have different selectors -->
 <!-- Type - i.e h1, p, table etc... -->
 <!-- Class - i.e .classname -->
@@ -405,3 +406,107 @@
 <!-- 2. (Child) div > p - only direct children of that specific <div> -->
 <!-- 3. (Adjacent Sibling) div + p - select first <p> immediately after that specific <div> -->
 <!-- 4. (General Sibling) div ~ p - all <p> siblings after a <div> -->
+
+<!-- # Attribute Selectors -->
+<!-- i.e 
+ 1. [type="text"] - select input with type text - same for all types of inputs 
+ 2. [class*="icon"] - select all the element whose class name contains icon - anywhere in the class value
+ 2. [class^="icon"] - select all the element whose class name start with icon
+ 2. [class$="icon"] - select all the element whose class name ends with icon
+-->
+
+<!-- # Pseudo Classes - based on the user interaction it will react -->
+<!-- 
+  basic syntax (pseudo classes are denoted by :)
+  selector:pseudo-class {
+    property: value;
+  }
+-->
+
+<!-- # Commonly used Pseudo Classes -->
+<!-- :hover - when mouse hover on an element -->
+<!-- :focus - when input get focus -->
+<!-- :active - when element actively clicked -->
+<!-- :visited - style visited links -->
+<!-- :first-child - first child of a parent -->
+<!-- :last-child - last child of a parent -->
+<!-- :nth-child(n) - selects the nth child - (n) parameter will be dynamic numbers -->
+<!-- :nth-of-type(n) - selects the nth of same type -->
+<!-- :not(selector) - excludes element -->
+<!-- :checked - when a checkbox/radio is selected -->
+<!-- :disabled, :enabled - based on input state -->
+
+<!-- # Pseudo Elements - helps to style/add something in specific part of the element without adding any markup to the HTML -->
+<!-- 
+  basic syntax (pseudo elements are denoted by ::)
+  selector::pseudo-elements {
+    property: value;
+  }
+-->
+
+<!-- # Commonly used Pseudo Elements -->
+<!-- ::before - insert content before the element, we use "content" property to insert a content -->
+<!-- ::after - insert contetn after the element -->
+<!-- ::first-letter - styles the first letter of a text -->
+<!-- ::first-line - styles the first line of block of text -->
+<!-- ::selection - styles when user hightlights it -->
+
+<!-- also possible to combine pseudo classes with pseudo elements, i.e -->
+<!-- 
+  p:hover::after {
+    content: "Peace";
+  }
+-->
+
+<!-- 3. Box Model -->
+<!-- Every HTML element on a page is considered as Rectangular Box, and the Box Model defines how the size of the box will be calculated -->
+<!-- Each Box has four layers (from innermost to outermost) -->
+<!-- 1. content - the actual content i.e text, image etc... -->
+<!-- 2. padding - space inside the box between content and border -->
+<!-- 3. border - a line that wraps the padding and content -->
+<!-- 4. margin - space outside the box between current element and the other element -->
+
+<!-- if we didn't use box-sizing: border-box then the width and height of a particular element calculated as below -->
+<!-- Total width = content actual width + padding(left, right) + border(left, right) -->
+<!-- Total height = content actual height + padding(top, bottom) + border(top, bottom) -->
+
+<!-- if we use box-sizing: border-box then the padding and border included within the total width and height -->
+
+<!-- i.e without box-sizing: border-box -->
+<!-- 
+  p{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 2px solid red;
+    margin: 10px;
+  }
+  width will be calculated as follows
+  width: 244px = 200 + 20*2 + 2*2 - 244px will final width of the content;
+
+  height will be calculated as follows
+  height: 244px = 200 + 20*2 + 2*2 - 244px will final height of the content;
+-->
+
+<!-- i.e with box-sizing: border-box -->
+<!-- 
+  p{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 2px solid red;
+    margin: 10px;
+    box-sizing: border-box; the width and height remains the 200px including the padding and border
+  }
+-->
+
+<!-- # box-sizing: content-box vs box-sizing: border-box -->
+<!-- content-box 
+ 1. its a default value for box-sizing property
+ 2. width and height applied to the content only
+ 3. padding and border added outside the specified width and height i.e see above eg without border-box
+-->
+
+<!-- border-box
+ 1. padding and border included within the total width and height
+-->

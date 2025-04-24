@@ -518,3 +518,69 @@
 <!-- 3. absolute - position relative to its parent(ancestor) element, free from normal document flow (no space is reserved), we can freely place the element using top, right, bottom, left properties -->
 <!-- 4. fixed - fixed relative to its viewport (browser window), stays in place even when scrolling, free from normal flow -->
 <!-- 5. sticky - a mix of relative and fixed, before reaching scroll threshold it will act as relative, after reaching scroll threshold it will act as fixed, and sticky only works in scrollable container with a height, must its parent container doesn't have overflow: hidden or auto -->
+
+<!-- 5. Layouts in Css -->
+<!-- it controls where, how elements appear on the page -->
+<!-- layout will be handled by display property -->
+<!-- values of display properties as follows -->
+<!-- 1. block - take full width and starts on a new line -->
+<!-- 2. inline - respects content width only but flows inline (cannot set width and height) -->
+<!-- 3. inline-block - like inline, but allows widht and height (can set width and height) -->
+<!-- 4. none - hides the element completely -->
+<!-- 5. flex - activates flexbox layout -->
+<!-- 6. grid - activate grid layout -->
+<!-- 7. table, table-row - used for table style layout -->
+
+<!-- # flexbox - one dimensional layout, either works with rows or columns -->
+<!-- key properties used with flex -->
+<!-- 1. flex-direction - row/column -->
+<!-- 2. justify-content - for horizontal alignment -->
+<!-- 3. align-items - for vertical alignment -->
+<!-- 4. flex-wrap - allows wrapping -->
+<!-- 5. gap - spacing between items -->
+
+<!-- # Grid - two dimensional layout, works for both rows and columns together -->
+<!-- key properties used with grid -->
+<!-- 1. grid-template-columns - column layout -->
+<!-- 2. grid-template-rows - row layout -->
+<!-- 3. grid-column, grid-row - for positioning -->
+<!-- 4. place-items - for alignment shortcuts -->
+
+<!-- # Float - positioning element to the left or right of the container -->
+<!-- values of float property as follows -->
+<!-- 1. left - float element to its left of the container -->
+<!-- 2. right - float element to its right of the container -->
+<!-- 3. none - default value, no float applied -->
+<!-- 4. inherit - inherit float value from parent -->
+
+<!-- # z-index - used to layoring the elements -->
+<!-- only works with positioned element (relative, absolute, fixed, sticky) -->
+<!-- higher the z-index value means - closer to the viewer (bring elements to front) -->
+<!-- default z-index will be taken as auto (treated as 0) -->
+
+<!-- # overflow - handling content beyond box-boundaries -->
+<!-- i.e how content handled if it content height/width exceeded -->
+<!-- values of overflow property as follows -->
+<!-- 1. visible - default, if content overflows, it visible outside of the box -->
+<!-- 2. hidden - if content overflows, no-scroll, it will hide -->
+<!-- 3. scroll - always add scrollbars, whether its needed or not -->
+<!-- 4. auto - add scrollbars only when neccessary -->
+
+<!-- overflow-x and overflow-y - helpfull if you want to handle independantly horizontal and vertical overflow -->
+<!-- overflow-x - controls horizontal overflow -->
+<!-- overflow-y - controls vertical overflow -->
+
+<!-- # Layout Helper Units -->
+<!-- these are css units used to calculate units -->
+<!-- there are two types of units are there -->
+<!-- 1. Absolute Units - (not responsive, fixed sizes) -->
+<!-- px (fixed size), in, cm, mm, pt, pc -->
+<!-- 2. Relative Units -->
+<!-- % - relative to parent container size (scales with parent) -->
+<!-- em - relative to the font size of the element (scales with font size) -->
+<!-- rem - relative to the root font size html (scales with font size) -->
+<!-- vw - viewwidth (viewport width 1vw = 1% of viewport width) 100vw = full screen width (scales with viewport) -->
+<!-- vh - viewheight (viewport height 1vh = 1% of viewport height) 100vh = full screen height (scales with viewport) -->
+<!-- vmin - minimum of viewports height/width -->
+<!-- vmax - maximum of viewports height/width -->
+<!-- fr - fractional unit used in css grid -->

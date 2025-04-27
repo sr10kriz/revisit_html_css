@@ -369,7 +369,7 @@
 <!-- DOM - focus on whats inside the page -->
 <!-- BOM - focus on whats around the page -->
 
-<!-- WRAP HTML -->
+<!-- WRAP-HTML -->
 
 <!-- CSS -->
 <!-- 1. CSS Basics -->
@@ -584,3 +584,181 @@
 <!-- vmin - minimum of viewports height/width -->
 <!-- vmax - maximum of viewports height/width -->
 <!-- fr - fractional unit used in css grid -->
+
+<!-- 6. Colors and Backgrounds -->
+<!-- # Colors -->
+<!-- hexadecimal - #fffff -->
+<!-- short hex - #f00 -->
+<!-- RBG Colors - rgb(255, 0, 0) -->
+<!-- RGBA Colors (with transparency) - rgba(255, 0, 0, 0.5) - 50% transparent red -->
+<!-- HSL Colors (Hue, Saturation, Lightness) - hsl(0, 100%, 50%) - Red -->
+<!-- HSL Colors (with alpha tranparency) - hsla(0, 100%, 50%, 0.5) - Red -->
+
+<!-- # Backgrounds -->
+<!-- for bg-color -  background-color: blue -->
+<!-- for bg-image -  background-image: url('image.png') -->
+<!-- for bg-position - background-repeat: no-repeat -->
+<!-- for bg-size - background-size: cover or contain or manually set width and height i.e 100px (w) 200px (h) -->
+<!-- for bg-posiition - background-position: center -->
+<!-- for bg-attachments (Scroll behaviour) - background-attachment: fixed (parallax effect) or scroll (default) -->
+<!-- for multiple-bgs - background-image: url('image.png'), url('image_1.jpg') -->
+<!-- for gradients - background-image: linear-gradient(to right, red, black) -->
+
+<!-- shorthand for the above -->
+<!-- background: url('image.png') no-repeat center/cover -->
+
+<!-- 7. Transitions and Animations -->
+<!-- # Transitions - it makes an property changes smoothly not with immediate effect -->
+<!-- syntax - transition: property duration timing-function delay -->
+<!-- transition-property - which css property you want to animate i.e background-color, width etc... -->
+<!-- transition-duration - how long the animation lasts i.e 2s, 500ms etc... -->
+<!-- transition-timing-function - the speed curve i.e  ease, ease-in, ease-out, linear, ease-in-out etc... -->
+<!-- transition-delay - how long to wait before starting the transition -->
+
+<!-- 
+  i.e 
+    div {
+      transition: background-color 0.5s ease-in 1s;
+    }
+
+    div:hover {
+      background-color: #fffff;
+    }
+-->
+
+<!-- # Animations - it moves/animate an element through multiple steps using @keyframes -->
+<!-- basic syntax -->
+<!-- 
+  this is keyframe
+  @keyframes messi {
+    from { transform: translate(0); },
+    to { tronsform: translateX(100); }
+  }
+
+  div {
+    animation-name: messi;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 2s;
+  }
+-->
+
+<!-- shorthand -->
+<!-- animation: messi 2s ease-in 2s -->
+
+<!-- 8. Media Queries and Responsive Designs (for responsiveness use always relative units i.e %, em, rem, vw, vh) -->
+<!-- # Media Queries - let you apply different sstyles to different screen sizes (for devices), its like conditional css i.e if the screen size is this px to this px then apply this styles etc... -->
+
+<!-- basic syntax
+ @media (condition) {
+  css rule...
+ }
+-->
+
+<!-- media queries breakpoints - breakpoints are nothing but check screen sizes like conditional css -->
+<!-- common breakpoints used across media queries follows (but changes as per projects needs (customized)) -->
+<!-- 1. extra small devices - (0px - 600px) -->
+<!-- 2. small devices - (600px - 768px) -->
+<!-- 3. medium devices - (768px - 992px) -->
+<!-- 4. large devices - (992px - 1200px) -->
+<!-- 5. extra large devices - ( > 1200px) -->
+
+<!-- 
+  between 768px to 992px (min 768px, max 992px)
+  @media (min-width: 768px) and (max-width: 992px) {
+    css rule
+  }
+-->
+
+<!-- 9. Some of the Additional Important Concepts in CSS -->
+<!-- # Specificity (giving importance) -->
+<!-- i.e
+ id selector has more specificity
+
+<span id="messi" class="messi">Peace</span>  
+ #messi {
+  color: red;
+ }
+
+ .messi {
+  color: blue
+ }
+
+ span {
+  color: green;
+ }
+
+ here, the final output will be color: red, because the id is the more strongest than the other selectors
+-->
+
+<!-- # Inheritance - with some CSS properties are automatically inherited by child elements -->
+<!-- common inherited properties i.e color, font-family etc... -->
+<!-- i.e
+  body {
+    color: red;
+  }
+
+  inside the all the content will go 
+  <p>Messi</p> - for this <p> element, we didnt provide any colors but it always inherits its color from body
+  
+    IMPORTANT NOTE: Not all properties are inherited (i.e margins, border) etc...
+-->
+
+<!-- # Cascade - means when multiple rules apply to the same element, then CSS cascades and decides -->
+<!-- which rule wins based on the below three -->
+<!-- 1. importance - !important (forces css rule to win over other rules, even the specificity is higher) -->
+<!-- 2. specificity -->
+<!-- 3. src order - last rule wins if same specificity -->
+
+<!-- final thoughts -->
+<!-- 1. specificity - who is more powerfull -->
+<!-- 2. inheritance - child copies parent styles -->
+<!-- 3. cascade - last rule or higher power wins -->
+
+<!-- 10. CSS preprocessors - these are tools that normal css with extra features like variables, nesting, mixins etc... -->
+<!-- how pre-processors are compiled - after writing codes in pre-processors, it compiles into normal css that browser will understand -->
+<!-- popular css pre-processors are SASS (Syntactically Awesome Style Sheets), SCSS (Sassy Cascading Style Sheets) -->
+
+<!-- major differences SASS vs SCSS -->
+<!-- 1. SASS - is older version, not using curly braces ({}) or semi-colon (;) -->
+<!-- 2. SCSS - is newer version, similar to normal css, uses curly braces ({}) and semi-colons (;) -->
+<!-- 3. file extension SASS (.sass), SCSS (.scss) -->
+
+<!-- # Core Features -->
+<!-- 1. Variables - store values and re-use them -->
+<!-- i.e
+ $primary-color: #fffff;
+
+ body {
+  background-color: $primary-color;
+ }
+-->
+
+<!-- 2. Nesting - write selectors inside selectors like HTML treee -->
+<!-- i.e
+ nav {
+    ul {
+      li {
+        a {
+          color: red;
+        }
+      }
+    }
+ }
+-->
+
+<!-- 3. Mixins - Reusable chunks of code (like a function we use where ever we want) -->
+<!-- i.e
+ @mixin button-style {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+ }
+
+ .button {
+    @include button-style;
+ }
+-->
+
+<!-- WRAP-CSS -->

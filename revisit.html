@@ -138,7 +138,7 @@
 <!-- target - where the form response will displayed, _blank, _self, _parent, _top -->
 <!-- autocomplete - helps browser to autofill form values -->
 <!-- novalidate - skips HTML5 validations required, pattern (RegEx validations) etc...uses js custom validations -->
-<!-- name - reference of the form we may use this name in js to retrieve manipulate form datas, mainly used to identify the data on the server side -->
+<!-- name - reference of the form we may use this name in js to retrieve/manipulate form datas, mainly used to identify the data on the server side -->
 
 <!-- HTTP METHODS -->
 <!-- GET - to retrieve data, and data appended as query parameters mostly in filters, search etc... -->
@@ -226,7 +226,7 @@
 <!-- attributes of table element -->
 <!-- colspan - merges columns -->
 <!-- rowspan - merges rows -->
-<!-- border - borders the table -->
+<!-- border - borders the table (works well with css) -->
 
 <!-- 8. Semantic HTML -->
 <!-- Semantic HTML means using elements for what they are meant to represent i.e elements name itself describe the purpose to developers, browsers as well as end-users -->
@@ -246,6 +246,7 @@
 <!-- Improved SEO -->
 <!-- Easy Maintainability (easier for teams to understand) -->
 <!-- Cleaner Code (more readable than using n number of div's etc....) -->
+<!-- helpfull for screen readers -->
 
 <!-- 9. HTML vs HTML5 -->
 <!-- key differences -->
@@ -337,7 +338,7 @@
 <!-- # ARIA - Accessible Rich Internet Applications - making HTML accessible for screen readers -->
 <!-- # Screen readers - helps make websites accessible to everyone even for blind or low vision person, thats why semantic elements and ARIA attributes are crucial, see the below eg... -->
 
-<!-- attributes of ARIA i.e aria-label, aria-hidden, aria-role etc... -->
+<!-- attributes of ARIA i.e aria-label, aria-hidden, aria-role, aria-checked etc... -->
 
 <!-- <button>Submit</button> - if you use button like this the screen readers might say button with submit- its great using semantic html - good for screen readers -->
 
@@ -517,7 +518,7 @@
 <!-- 2. relative - elements flow normally in the document, but we can shift it using top, right, bottom, left properties -->
 <!-- 3. absolute - position relative to its parent(ancestor) element, free from normal document flow (no space is reserved), we can freely place the element using top, right, bottom, left properties -->
 <!-- 4. fixed - fixed relative to its viewport (browser window), stays in place even when scrolling, free from normal flow -->
-<!-- 5. sticky - a mix of relative and fixed, before reaching scroll threshold it will act as relative, after reaching scroll threshold it will act as fixed, and sticky only works in scrollable container with a height, must its parent container doesn't have overflow: hidden or auto -->
+<!-- 5. sticky - a mix of relative and fixed, before reaching scroll threshold it will act as relative, after reaching scroll threshold it will act as fixed, and sticky only works in scrollable container with a height, must its parent container doesn't have overflow: hidden or auto\ -->
 
 <!-- 5. Layouts in Css -->
 <!-- it controls where, how elements appear on the page -->
@@ -632,7 +633,7 @@
   this is keyframe
   @keyframes messi {
     from { transform: translate(0); },
-    to { tronsform: translateX(100); }
+    to { transform: translateX(100); }
   }
 
   div {
